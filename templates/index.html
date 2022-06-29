@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-image: url("/static/g2.jpg");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size:cover ;
+        position: relative;
+        height: 700px;
+      }
+      form label{
+        padding: 40px;
+        margin: 40px;
+        color: antiquewhite;
+        font-size: 30px;
+      }
+      h1{
+        color: rgb(190, 91, 141);
+      }
+      form input{
+        color: rgb(171, 49, 175);
+        font-size: 30px;
+      }
+      form select{
+        color: rgb(171, 49, 175);
+        font-size: 30px;
+
+      }
+      form button{
+        color: rgb(171, 49, 175);
+        font-size: 30px;
+        padding: 20px;
+        margin: 20px;
+      }
+    
+
+   
+      
+      
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decision Tree</title>
+  </head>
+  <body>
+    <h1>Galary star find out</h1>
+
+    <form action="/predict" method="post">
+      <label>'Temperature (K)'</label
+      ><input type="value" name="Temperature (K)" /><br>
+      <label>'Luminosity(L/Lo)'</label
+      ><input type="value" name="Luminosity(L/Lo)" /><br>
+      <label>'Radius(R/Ro)'</label><input type="value" name="Radius(R/Ro)" /><br>
+      <label>'Absolute magnitude (Mv)'</label
+      ><input type="value" name="Absolute magnitude (Mv)" /><br>
+      <label>'Star type'</label><input type="value" name="Star type" /><br />
+
+      <label>Star color</label>
+      <select name="Star color">
+        <option value="0">Star_color_Blue_white</option><br>
+        <option value="1">Star_color_Orange</option><br>
+        <option value="2">Star_color_Orange_Red</option><br>
+        <option value="3">Star_color_Pale_yellow_orange</option><br>
+        <option value="4">Star_color_Red</option><br>
+        <option value="5">Star_color_White</option><br>
+        <option value="6">Star_color_yellow_white</option><br>
+        <option value="7">Star_color_yellowish</option>
+        </select><br /><br>
+      <button type="submit">Spectral Class</button><br><br>
+
+      <label>Type of the Spectral class</label><label>{{predict}}</label>
+    </form>
+  </body>
+</html>
